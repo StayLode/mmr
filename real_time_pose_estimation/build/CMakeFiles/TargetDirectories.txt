@@ -1,0 +1,4 @@
+/root/real_time_pose_estimation/build/CMakeFiles/rebuild_cache.dir
+/root/real_time_pose_estimation/build/CMakeFiles/edit_cache.dir
+/root/real_time_pose_estimation/build/CMakeFiles/example_tutorial_pnp_detection.dir
+/root/real_time_pose_estimation/build/CMakeFiles/example_tutorial_pnp_registration.dir
