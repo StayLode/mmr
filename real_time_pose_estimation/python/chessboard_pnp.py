@@ -47,10 +47,10 @@ for fname in glob.glob('test-modified.jpeg'):
         # Find the rotation and translation vectors using PnP
         # https://docs.opencv.org/4.x/d9/d0c/group__calib3d.html#ga549c2075fac14829ff4a58bc931c033d
 
-        ret1,rvecs,tvecs = cv.solvePnP(objp, corners2, mtx, dist, flags=cv.SOLVEPNP_ITERATIVE)
+        # ret1,rvecs,tvecs = cv.solvePnP(objp, corners2, mtx, dist, flags=cv.SOLVEPNP_ITERATIVE)
         # ret1,rvecs,tvecs = cv.solvePnP(objp, corners2, mtx, dist, flags=cv.SOLVEPNP_EPNP)
         # ret1,rvecs,tvecs = cv.solvePnP(objp, corners2, mtx, dist, flags=cv.SOLVEPNP_IPPE) # Infinitesimal Plane-Based Pose Estimation
-        # ret1,rvecs,tvecs = cv.solvePnP(objp, corners2, mtx, dist, flags=cv.SOLVEPNP_SQPNP)
+        ret1,rvecs,tvecs = cv.solvePnP(objp, corners2, mtx, dist, flags=cv.SOLVEPNP_SQPNP)
 
         ## ret1,rvecs,tvecs = cv.solvePnP(objp, corners2, mtx, dist, flags=cv.SOLVEPNP_P3P) #-> Doesnot Work
         ## ret1,rvecs,tvecs = cv.solvePnP(objp, corners2, mtx, dist, flags=cv.SOLVEPNP_DLS) #-> falls back to EPNP
